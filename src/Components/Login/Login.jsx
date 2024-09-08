@@ -35,7 +35,7 @@ export default function Login({saveUserData}) {
 
   let validate = Yup.object({
     email: Yup.string().required("email is required").email("email invalid"),
-    password: Yup.string().required("passowrd is required").matches(/^[0-9]{5,10}$/, "must start with capital "),
+    password: Yup.string().required("passowrd is required"),
   });
 
   let formik = useFormik({
