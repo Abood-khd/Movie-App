@@ -30,8 +30,8 @@ export default function Register() {
   let validate = Yup.object({
     name: Yup.string().required("name is required").min(3, "minimum name is 3 char ").max(15, "maximum char is 15"),
     email: Yup.string().required("email is required").email("email invalid"),
-    password: Yup.string().required("passowrd is required").matches(/^[0-9]{5,10}$/, "must start with capital "),
-    rePassword: Yup.string().required("rePassword is required").oneOf([Yup.ref("password")], "repassword dont match"),
+    // password: Yup.string().required("passowrd is required").matches(/^[0-9]{5,10}$/, "must start with capital "),
+    // rePassword: Yup.string().required("rePassword is required").oneOf([Yup.ref("password")], "repassword dont match"),
     phone: Yup.string().required("phone is required").matches(/^01[0125][0-9]{8}/, "this not eg phone"),
   });
 
